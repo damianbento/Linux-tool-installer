@@ -1,0 +1,18 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'servers'
+    static_configs:
+      - targets: ['10.40.40.44:9100']
+        labels:
+          instance: 'IA'
+      - targets: ['10.10.20.36:9100']
+        labels:
+          instance: 'Wordpress'
+      - targets: ['10.40.30.135:9100']
+        labels:
+          instance: 'Monitoreo'
+      - targets: ['10.10.20.21:9100']
+        labels:
+          instance: 'NextCloud'
